@@ -15,4 +15,19 @@
 
 ### CNN
 From Video 17: CNNS
-
+- drawbacks of MLP: 
+	- flattening removes spatial information
+	- fully connected creates too many parameters
+- CNNs:
+	- CNNs use sparsely connected layers
+	- will accept the image as is as a matrix
+- CNNs try to find patterns in a local region (kernel sized region) and pass this on to the next layers
+- frequency in images means `rate of change of intensity`. i.e, the places where intensity changes abrupty(stripes), the frequency is high.
+- `highpass filters` act like edge detectors.
+![highpass filter](images/highpass.png)
+- It is important for edge detection that all the elements of the kernel/filter sums to `0`. Otherwise the filtered image will be weighted and will have the effect o brightening or darkening the entire filtered image.
+- Edge Handling: Kernel convolution relies on centering a pixel and looking at it's surrounding neighbors. So, what do you do if there are no surrounding pixels like on an image corner or edge? Well, there are a number of ways to process the edges, which are listed below. It’s most common to use padding, cropping, or extension. In extension, the border pixels of an image are copied and extended far enough to result in a filtered image of the same size as the original image.
+	- _Extend:_ The nearest border pixels are conceptually extended as far as necessary to provide values for the convolution. Corner pixels are extended in 90° wedges. Other edge pixels are extended in lines.
+	- _Padding:_ The image is padded with a border of 0's, black pixels.
+	- _Crop:_ Any pixel in the output image which would require values from beyond the edge is skipped. This method can result in the output image being slightly smaller, with the edges having been cropped.
+- 
