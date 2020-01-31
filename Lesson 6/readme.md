@@ -38,4 +38,9 @@ From Video 17: CNNS
 	- _capsule network:_ there has been research into classification methods that do not discard spatial information (as in the pooling layers), and instead learn to spatial relationships between parts (like between eyes, nose, and mouth). Each capsule outputs a vector with some magnitude and orientation. ![capsule](images/capsule.png)
 - Video 34: General CNN architecture pipeline overview
 - http://cs231n.github.io/convolutional-networks/#conv
-- **imp** 35: CNN layers _code_ in pytorch + size and parameter calculations. Picture in `images/conv_details.png`
+- *Important** 35: CNN layers _code_ in pytorch + size and parameter calculations. Picture in `images/conv_details.png`
+- _Image Augmentation_: If we want to detect and object in an image, we want our model to be:
+	- rotation invariant: any rotation of the image should not matter
+	- translation invariant: where the object is doesn't matter
+	- scale invariant: size of the onject shouldn't matter
+For this we should perform data augmentation so our model can see all variations of an image and our model can be more robust. This also prevents overfitting.
