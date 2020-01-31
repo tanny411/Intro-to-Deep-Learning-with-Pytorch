@@ -44,3 +44,7 @@ From Video 17: CNNS
 	- translation invariant: where the object is doesn't matter
 	- scale invariant: size of the onject shouldn't matter
 For this we should perform data augmentation so our model can see all variations of an image and our model can be more robust. This also prevents overfitting.
+- Lots of **resources** for CNN visualizations(42-43)
+- Ways to visualize CNNs:
+	- visuallize the activation maps(see what filtering is doing)
+	- constructing images that maximize activations of a filter
