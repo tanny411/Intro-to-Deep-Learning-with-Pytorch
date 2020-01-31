@@ -1,7 +1,7 @@
 ## Lesson 6: CNN
 
 ### MLP:
-- Working with MNIST Dataset (basics)
+- Working with **MNIST** Dataset (basics)
 - Important steps are flattening and **Normalization**(/255)
 - The distribution of such data should resemble a Gaussian function centered at zero. For image inputs we need the pixel numbers to be positive, so we often choose to scale the data in a normalized range [0,1].
 - Search codes for hidden layer and nodes numbers intuition
@@ -30,4 +30,12 @@ From Video 17: CNNS
 	- _Extend:_ The nearest border pixels are conceptually extended as far as necessary to provide values for the convolution. Corner pixels are extended in 90° wedges. Other edge pixels are extended in lines.
 	- _Padding:_ The image is padded with a border of 0's, black pixels.
 	- _Crop:_ Any pixel in the output image which would require values from beyond the edge is skipped. This method can result in the output image being slightly smaller, with the edges having been cropped.
-- 
+- For a `n-d` input image, the filter will also have to be `n-d`. All elements of the `n-d` filter is summed. And the output `d` will be number of filters used.
+- Video 29: **CIFAR** CNN solution
+- Pooling:
+	- max pooling
+	- average pooling
+	- _capsule network:_ there has been research into classification methods that do not discard spatial information (as in the pooling layers), and instead learn to spatial relationships between parts (like between eyes, nose, and mouth). Each capsule outputs a vector with some magnitude and orientation. ![capsule](images/capsule.png)
+- Video 34: General CNN architecture pipeline overview
+- http://cs231n.github.io/convolutional-networks/#conv
+- **imp** 35: CNN layers _code_ in pytorch + size and parameter calculations. Picture in `images/conv_details.png`
